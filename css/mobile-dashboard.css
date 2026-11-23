@@ -185,3 +185,229 @@
         gap: 10px;
     }
 }
+/* =========================================
+   NEXMESH - STUDENT & PARENT MOBILE NAVIGATION
+   Desktop layouts remain unchanged.
+========================================= */
+
+@media (max-width: 750px) {
+
+    /* Keep horizontal scrolling inside the navigation only */
+
+    body.student-portal,
+    body.parent-portal {
+        width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    body.student-portal .dashboard-layout,
+    body.parent-portal .dashboard-layout {
+        display: block !important;
+        width: 100% !important;
+        min-height: 100vh;
+        overflow-x: hidden !important;
+    }
+
+    /* MOBILE SIDEBAR */
+
+    body.student-portal .dashboard-layout > .sidebar,
+    body.parent-portal .dashboard-layout > .sidebar {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 12px 14px !important;
+        box-sizing: border-box !important;
+        z-index: 100;
+        overflow: visible !important;
+    }
+
+    /* PORTAL LOGO */
+
+    body.student-portal .sidebar-logo,
+    body.parent-portal .sidebar-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 4px 13px !important;
+        min-height: 45px;
+    }
+
+    body.student-portal .sidebar-logo span,
+    body.parent-portal .sidebar-logo span {
+        display: inline !important;
+        font-size: 15px !important;
+        white-space: nowrap;
+    }
+
+    /* SWIPEABLE HORIZONTAL NAVIGATION */
+
+    body.student-portal .sidebar-nav,
+    body.parent-portal .sidebar-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center;
+        gap: 7px !important;
+        width: 100% !important;
+        max-width: 100%;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        padding: 5px 1px 10px !important;
+        margin: 0 !important;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+        touch-action: pan-x;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255,255,255,0.35) transparent;
+    }
+
+    body.student-portal .sidebar-nav a,
+    body.parent-portal .sidebar-nav a {
+        display: inline-flex !important;
+        flex: 0 0 auto !important;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        width: auto !important;
+        min-width: max-content;
+        min-height: 41px;
+        margin: 0 !important;
+        padding: 9px 12px !important;
+        border-radius: 9px;
+        white-space: nowrap !important;
+        font-size: 12px !important;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+
+    body.student-portal .sidebar-nav a span,
+    body.parent-portal .sidebar-nav a span {
+        display: inline-flex !important;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        width: auto !important;
+        font-size: 14px !important;
+    }
+
+    /* Active navigation item */
+
+    body.student-portal .sidebar-nav a.active {
+        background: rgba(37, 99, 235, 0.22) !important;
+        color: #ffffff !important;
+    }
+
+    body.parent-portal .sidebar-nav a.active {
+        background: rgba(21, 155, 114, 0.22) !important;
+        color: #ffffff !important;
+    }
+
+    /* Subtle scrollbar for browsers that support it */
+
+    body.student-portal .sidebar-nav::-webkit-scrollbar,
+    body.parent-portal .sidebar-nav::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    body.student-portal .sidebar-nav::-webkit-scrollbar-track,
+    body.parent-portal .sidebar-nav::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    body.student-portal .sidebar-nav::-webkit-scrollbar-thumb,
+    body.parent-portal .sidebar-nav::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,0.3);
+        border-radius: 10px;
+    }
+
+    /* PROFILE AND LOGOUT ROW */
+
+    body.student-portal .sidebar-bottom,
+    body.parent-portal .sidebar-bottom {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin-top: 5px !important;
+        padding: 9px 0 0 !important;
+        border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    body.student-portal .sidebar-bottom a,
+    body.parent-portal .sidebar-bottom a {
+        display: inline-flex !important;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        width: auto !important;
+        min-height: 38px;
+        margin: 0 !important;
+        padding: 8px 12px !important;
+        font-size: 12px !important;
+        white-space: nowrap;
+    }
+
+    body.student-portal .sidebar-bottom a span,
+    body.parent-portal .sidebar-bottom a span {
+        display: inline-flex !important;
+        font-size: 14px !important;
+    }
+
+    /* MAIN CONTENT - remove the old 65px sidebar offset */
+
+    body.student-portal .main-content,
+    body.parent-portal .main-content {
+        position: relative;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin-left: 0 !important;
+        padding: 20px 14px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden;
+    }
+
+    body.student-portal .topbar,
+    body.parent-portal .topbar {
+        width: 100%;
+        min-width: 0;
+        gap: 12px;
+    }
+
+    body.student-portal .topbar h1,
+    body.parent-portal .topbar h1 {
+        font-size: clamp(18px, 5vw, 22px);
+        overflow-wrap: anywhere;
+    }
+}
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width: 380px) {
+
+    body.student-portal .dashboard-layout > .sidebar,
+    body.parent-portal .dashboard-layout > .sidebar {
+        padding: 10px !important;
+    }
+
+    body.student-portal .sidebar-nav a,
+    body.parent-portal .sidebar-nav a {
+        min-height: 39px;
+        padding: 8px 10px !important;
+        font-size: 11px !important;
+    }
+
+    body.student-portal .main-content,
+    body.parent-portal .main-content {
+        padding: 15px 10px !important;
+    }
+}
