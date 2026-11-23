@@ -1,0 +1,187 @@
+
+/* =========================================
+   NEXMESH - ADMIN & TEACHER MOBILE LAYOUT
+   Desktop layout remains unchanged.
+========================================= */
+
+@media (max-width: 750px) {
+
+    body:has(.admin-dashboard-header) {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    body:has(.admin-dashboard-header) .dashboard-layout {
+        display: block !important;
+        width: 100% !important;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* MOBILE TOP NAVIGATION */
+
+    body:has(.admin-dashboard-header) .dashboard-layout > .sidebar {
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 12px 14px !important;
+        z-index: 100;
+        overflow: visible !important;
+        box-sizing: border-box;
+    }
+
+    body:has(.admin-dashboard-header) .sidebar-logo {
+        padding: 5px 4px 13px !important;
+        gap: 10px;
+    }
+
+    body:has(.admin-dashboard-header) .sidebar-logo h2 {
+        font-size: 19px;
+        line-height: 1.3;
+    }
+
+    body:has(.admin-dashboard-header) .sidebar-logo p {
+        font-size: 11px;
+    }
+
+    /* SWIPEABLE NAVIGATION */
+
+    body:has(.admin-dashboard-header) .sidebar-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 7px !important;
+        width: 100%;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        padding: 4px 0 9px;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    body:has(.admin-dashboard-header) .sidebar-nav a {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto !important;
+        width: auto !important;
+        min-height: 40px;
+        padding: 9px 12px !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
+        font-size: 12px !important;
+        border-radius: 9px;
+    }
+
+    /* LOGOUT */
+
+    body:has(.admin-dashboard-header) .sidebar-logout {
+        display: flex;
+        justify-content: flex-end;
+        margin: 5px 0 0 !important;
+        padding: 9px 0 0 !important;
+        border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    body:has(.admin-dashboard-header) .logout-button {
+        width: auto !important;
+        min-height: 38px;
+        padding: 9px 15px !important;
+        font-size: 12px !important;
+    }
+
+    /* MAIN DASHBOARD */
+
+    body:has(.admin-dashboard-header) .admin-dashboard-page {
+        position: relative !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding: 18px 14px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden;
+    }
+
+    body:has(.admin-dashboard-header) .admin-dashboard-header {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 22px 18px !important;
+        box-sizing: border-box;
+        border-radius: 16px;
+    }
+
+    body:has(.admin-dashboard-header) .admin-dashboard-header h1 {
+        font-size: clamp(22px, 6vw, 28px) !important;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+    }
+
+    body:has(.admin-dashboard-header) .admin-dashboard-header p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    /* DASHBOARD CARDS */
+
+    body:has(.admin-dashboard-header) .admin-stats-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 12px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    body:has(.admin-dashboard-header) .admin-stat-card {
+        width: 100%;
+        min-width: 0;
+        padding: 17px;
+        box-sizing: border-box;
+    }
+
+    body:has(.admin-dashboard-header) .admin-quick-actions {
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100%;
+        min-width: 0;
+    }
+
+    body:has(.admin-dashboard-header) .admin-dashboard-section {
+        width: 100%;
+        min-width: 0;
+        padding: 18px;
+        box-sizing: border-box;
+    }
+
+    body:has(.admin-dashboard-header) .admin-section-header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    body:has(.admin-dashboard-header) .teacher-notification-panel {
+        max-width: calc(100vw - 36px);
+    }
+}
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width: 380px) {
+
+    body:has(.admin-dashboard-header) .admin-dashboard-page {
+        padding: 13px 10px !important;
+    }
+
+    body:has(.admin-dashboard-header) .admin-dashboard-header {
+        padding: 19px 15px !important;
+    }
+
+    body:has(.admin-dashboard-header) .admin-stat-card {
+        padding: 14px;
+        gap: 10px;
+    }
+}
