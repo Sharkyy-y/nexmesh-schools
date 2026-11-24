@@ -834,3 +834,54 @@
         padding: 14px 10px !important;
     }
 }
+
+/* =========================================
+   TEACHER DASHBOARD — MOBILE IMPROVEMENTS
+========================================= */
+
+@media (max-width: 600px) {
+
+    .admin-dashboard-page {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .admin-dashboard-header {
+        position: relative;
+        padding: 16px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .teacher-notification-wrapper {
+        position: relative;
+        max-width: 100%;
+    }
+
+    .teacher-notification-panel {
+        position: absolute;
+        right: 0;
+        left: auto;
+        width: min(320px, calc(100vw - 40px));
+        max-width: calc(100vw - 40px);
+        box-sizing: border-box;
+        z-index: 100;
+    }
+
+    .admin-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .admin-quick-actions {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .admin-dashboard-section {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+}
