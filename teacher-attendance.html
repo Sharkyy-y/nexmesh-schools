@@ -134,21 +134,117 @@
             color: #6b7280;
         }
 
-        @media (max-width: 600px) {
-            .attendance-page {
-                padding: 15px;
-            }
+       @media (max-width: 600px) {
 
-            .attendance-panel {
-                padding: 14px;
-            }
-        }
+    .attendance-page {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px;
+        box-sizing: border-box;
+    }
+
+    .attendance-header h1 {
+        font-size: 23px;
+    }
+
+    .attendance-controls {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .attendance-panel {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .attendance-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .attendance-actions button {
+        width: 100%;
+        min-height: 44px;
+    }
+
+    .attendance-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .attendance-table {
+        min-width: 650px;
+    }
+
+    .attendance-status {
+        min-width: 125px;
+    }
+
+}
     </style>
 </head>
 
 <body class="teacher-portal">
 
-    <main class="attendance-page">
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+                <h2>Teacher Portal</h2>
+                <p>Administration</p>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="teacher-dashboard.html">
+                    🏠 Dashboard
+                </a>
+
+                <a href="teacher-students.html">
+                    👥 My Students
+                </a>
+
+                <a href="teacher-grades.html">
+                    📊 Grades
+                </a>
+
+                <a href="teacher-timetable.html">
+                    🗓️ Timetable
+                </a>
+
+                <a href="teacher-attendance.html" class="active">
+                    📋 Attendance
+                </a>
+
+                <a href="teacher-conduct.html">
+                    ⚠️ Conduct
+                </a>
+
+                <a href="teacher-assignments.html">
+                    📝 Assignments
+                </a>
+
+                <a href="teacher-announcements.html">
+                    📢 Announcements
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <button id="logoutButton" class="logout-btn">
+                    🚪 Logout
+                </button>
+            </div>
+
+        </aside>
+
+        <main class="main-content attendance-page">
 
         <header class="attendance-header">
             <h1>Take Lesson Attendance</h1>
@@ -266,13 +362,13 @@
 
             </div>
 
+
         </section>
 
-    </main>
+        </main>
 
-   
+    </div>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="js/main.js"></script>
 
-</body>
-</html>
+<script src="js/main.js"></script>
