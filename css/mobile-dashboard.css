@@ -960,3 +960,77 @@
     }
 
 }
+/* =========================================
+   ADMIN TEACHERS — MOBILE EDIT MODAL
+========================================= */
+
+@media (max-width: 700px) {
+
+    #teacherModal {
+        padding: 10px !important;
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+
+    #teacherModal .student-modal-content {
+        width: 100%;
+        max-width: 560px;
+        max-height: calc(100vh - 20px);
+        max-height: calc(100dvh - 20px);
+        overflow-y: auto;
+        padding: 18px;
+        border-radius: 15px;
+        box-sizing: border-box;
+    }
+
+    #teacherModal .student-modal-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    #teacherModal .form-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        width: 100%;
+    }
+
+    #teacherModal .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        min-width: 0;
+        margin-bottom: 0;
+    }
+
+    #teacherModal .form-group label {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    #teacherModal .form-group input,
+    #teacherModal .form-group select,
+    #teacherModal .form-group textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    #teacherModal .modal-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    #teacherModal .modal-actions button {
+        width: 100%;
+        min-height: 44px;
+    }
+
+}
