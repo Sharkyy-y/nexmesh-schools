@@ -9151,20 +9151,29 @@ const logoutButton = document.getElementById("logoutButton");
 
 if (logoutButton) {
 
-    logoutButton.addEventListener("click", async function () {
+    logoutButton.addEventListener("click", async function (event) {
 
-        const { error } = await supabaseClient.auth.signOut();
+        event.preventDefault();
 
-        if (error) {
+        try {
+
+            const { error } = await supabaseClient.auth.signOut();
+
+            if (error) {
+                throw error;
+            }
+
+            window.location.replace("login.html");
+
+        } catch (error) {
+
             console.error("Logout error:", error);
             alert("Unable to log out. Please try again.");
-            return;
+
         }
 
-        window.location.href = "login.html";
     });
 }
-
 // ==========================================
 // TEACHER LOGOUT
 // ==========================================
